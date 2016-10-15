@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+    type="module"
+    version="3.1"
+    client="site">
+    <name>Yandex Maps module</name>
+    <author>Igor Rybalko</author>
+    <creationDate>October 2016</creationDate>
+    <license>GNU General Public License</license>
+    <authorEmail>igorrybalko2009@yandex.ru</authorEmail>
+    <authorUrl>wolfweb.com.ua</authorUrl>
+    <version>1.0.0</version>
+    <description>Module Yandex Maps. Developed by http://wolfweb.com.ua</description>
+    
+    <files>
+        <filename module="mod_yamaps">mod_yamaps.php</filename>
+        <filename>mod_yamaps.xml</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="breadth_cent"
+                    type="text" rows="3"
+                    label="MOD_YAMAPS_BREADTHCENTER"
+                    description="MOD_YAMAPS_NUMBERS" />
+                <field
+                    name="longitude_cent"
+                    type="text" rows="3"
+                    label="MOD_YAMAPS_LONGCENTER"
+                    description="MOD_YAMAPS_NUMBERS" />
+                <field
+                    name="zoom"
+                    type="text" rows="3"
+                    label="MOD_YAMAPS_SCALE"
+                    description="MOD_YAMAPS_INTEGER" />
+                <field
+                    name="height"
+                    type="text" rows="3"
+                    label="MOD_YAMAPS_HEIGHT"
+                    description="MOD_YAMAPS_PIXELS" />
+                <field name="items"
+                       type="repeatable"
+                       label="MOD_YAMAPS_DATA" >
+                    <fieldset hidden="true" name="item_modal" repeat="true">
+                        <field
+                            name="breadth"
+                            type="text" rows="3"
+                            label="MOD_YAMAPS_BREADTH"
+                            description="MOD_YAMAPS_NUMBERS" />
+                        <field
+                            name="longitude"
+                            type="text" rows="3"
+                            label="MOD_YAMAPS_LONGITUDE"
+                            description="MOD_YAMAPS_NUMBERS" />
+                        <field
+                            name="desc"
+                            type="text" rows="3"
+                            label="MOD_YAMAPS_DESC"
+                            description="MOD_YAMAPS_DETAL" />
+                        <field
+                            name="capcluster"
+                            type="text" rows="3"
+                            label="MOD_YAMAPS_CAPCLUSTER"
+                            description="" />
+                    </fieldset>
+                </field>
+
+            </fieldset>
+            <fieldset name="advanced">
+				<field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field
+                    name="moduleclass_sfx"
+                    type="textarea" rows="3"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+    
+    
+</extension>
