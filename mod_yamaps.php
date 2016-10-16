@@ -80,7 +80,7 @@ foreach($items as $item){
 
 <script>
     
-function initYaMaps(){ 
+function initYaMaps<?php echo $correct;?>(){ 
 
     var myMap,
         myGeoObjects = [],
@@ -114,7 +114,7 @@ function initYaMaps(){
     myMap.geoObjects.add(myClusterer);
 }
 
-ymaps.ready(initYaMaps);
+ymaps.ready(initYaMaps<?php echo $correct;?>);
 
 </script>
 <?php
